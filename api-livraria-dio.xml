@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api-livraria-dio</name>
+    </assembly>
+    <members>
+        <member name="M:api_livraria_dio.Controllers.LivrosController.Get(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos os livros de forma paginada
+            </summary>
+            <remarks>
+            Não é possível retornar os livros sem paginação
+            </remarks>
+            <param name="pagina">Indica qual página está sendo consultada. Mínimo 1</param>
+            <param name="quantidade">Indica a quantidade de reistros por página. Mínimo 1 e máximo 50</param>
+            <response code="200">Retorna uma lista com livros </response>
+            <response code="204">Retorna nada </response>   
+        </member>
+        <member name="M:api_livraria_dio.Controllers.LivrosController.Get(System.Int32)">
+            <summary>
+            Buscar o livro pelo id
+            </summary>
+            <remarks>
+            sem o id 
+            </remarks>
+            <param name="id">Id do livro a ser encontrado</param>
+            <response code="200">Retorna um livro</response>
+            <response code="204">Retorna nada</response>   
+        </member>
+        <member name="M:api_livraria_dio.Controllers.LivrosController.Post(api_livraria_dio.Models.LivroModel)">
+            <summary>
+            Insere um novo livro no banco de dados
+            </summary>
+            <remarks>
+            Insere um livro usando o LivroModel e retorna um LivroView
+            </remarks>
+            <param name="livro">Objeto com os dados</param>
+            <response code="200">Retorna o likvro criado</response>
+            <response code="422">Retorna erro de livro criado</response>   
+        </member>
+        <member name="M:api_livraria_dio.Controllers.LivrosController.Put(System.Int32,api_livraria_dio.Models.LivroModel)">
+            <summary>
+            Atualiza um novo livro no banco de dados
+            </summary>
+            <remarks>
+            Com o id do livro é possivel buscar e atualizalo separadamente do objeto
+            </remarks>
+            <param name="id">Id do livro a ser encontrado</param>
+            <param name="livro">Objeto com os dados</param>
+            <response code="200">Retorna o livro com as alterações </response>
+            <response code="204">Retorna nada</response>   
+        </member>
+        <member name="M:api_livraria_dio.Controllers.LivrosController.Patch(System.Int32,System.Double)">
+            <summary>
+            Atualiza o preço de um livro 
+            </summary>
+            <remarks>
+            Atualiza o preço de um livro com id do mesmo
+            </remarks>
+            <param name="id">Id do livro a ser encontrado</param>
+            <param name="preco">Novo preço para ser atualizado</param>
+            <response code="200">Retorna o livro com as alterações</response>
+            <response code="204">Retorna nada</response>   
+        </member>
+        <member name="M:api_livraria_dio.Controllers.LivrosController.QuantPatch(System.Int32,System.Int32)">
+            <summary>
+            Atualiza o quantidade de um livro 
+            </summary>
+            <remarks>
+            Atualiza o quantidade de um livro com id do mesmo
+            </remarks>
+            <param name="id">Id do livro a ser encontrado</param>
+            <param name="quant">Quantidade atualizada</param>
+            <response code="200">Retorna o livro com as alterações</response>
+            <response code="204">Retorna nada</response>    
+        </member>
+        <member name="M:api_livraria_dio.Controllers.LivrosController.DeleteAsync(System.Int32)">
+            <summary>
+            Remove de um livro 
+            </summary>
+            <remarks>
+            Remove de um livro com id do mesmo
+            </remarks>
+            <param name="id">Id do livro a ser encontrado</param>
+            <response code="200">Retorna o livro que foi apagado</response>
+            <response code="204">Retorna nada</response>
+        </member>
+    </members>
+</doc>
