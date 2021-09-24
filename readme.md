@@ -1,4 +1,4 @@
-# Foobar
+# Livraria DIO - API
 Trabalho de conclusão do curso **Criando um catálogo de jogos usando boas práticas de arquitetura com .Net** do professor
 **Thiago Campos de Oliveira**
 
